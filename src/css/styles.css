@@ -1,0 +1,54 @@
+.gallery {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.photo-card {
+  width: 200px;
+}
+.gallery__image {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.search-wrap {
+  width: 100%;
+  height: 60px;
+  background-color: #a52a2a;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.search-form {
+  margin-top: 10px;
+}
+button {
+  border-radius: 120px 15px 120px 15px;
+  border: 1px solid #000000;
+  background: none;
+  outline: 0;
+}
+button {
+  cursor: pointer;
+}
+.info {
+  display: flex;
+  font-size: 13;
+  box-shadow: 3px 3px 3px #a52a2a;
+}
+
+.info-item {
+  text-align: center;
+}
