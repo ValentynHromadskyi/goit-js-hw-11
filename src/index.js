@@ -2,8 +2,8 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 import SimpleLightbox from 'simplelightbox';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import './css/styles.css';
-import { fetchImages } from './fetchImages';
-import { createGallery } from './createGallery';
+import { fetchImages } from './fetchImages.js ';
+import { createGallery } from './createGallery.js';
 
 const refs = {
   form: document.getElementById('search-form'),
@@ -64,12 +64,12 @@ function handleData({ data }) {
     );
   }
   createGallery(data);
+  gallery.refresh();
 }
 
 async function loadMoreImgs() {
   page += 1;
   totalPages += HITS_PER_PAGE;
-  gallery.refresh();
   try {
     const imageData = await fetchImages(userInput, page, HITS_PER_PAGE);
     handleData(imageData);

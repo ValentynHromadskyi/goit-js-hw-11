@@ -1,18 +1,18 @@
-const refs = {gallery: document.querySelector('.gallery')};
+const refs = { gallery: document.querySelector('.gallery') };
 
 export function createGallery(data) {
-    const item = data.hits
-      .map(
-        ({
-          webformatURL,
-          largeImageURL,
-          tags,
-          likes,
-          views,
-          comments,
-          downloads,
-        }) =>
-          `
+  const item = data.hits
+    .map(
+      ({
+        webformatURL,
+        largeImageURL,
+        tags,
+        likes,
+        views,
+        comments,
+        downloads,
+      }) =>
+        `
            <div class="photo-card">
           <a class="gallery__link" href="${largeImageURL}">
       <img class="gallery__image" src="${webformatURL}" alt="${tags}" loading="lazy" />
@@ -36,9 +36,7 @@ export function createGallery(data) {
         </p>
       </div>
     </div>`
-      )
-      .join('');
-    refs.gallery.insertAdjacentHTML('beforeend', item);
-  
-    gallery.refresh();
-  }
+    )
+    .join('');
+  refs.gallery.insertAdjacentHTML('beforeend', item);
+}
